@@ -1,33 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-/*
-    <div id="parent">
-      <h1>I am h1 tag!</h1>
-    </div>
+const parent = React.createElement("h1",{},"This is core react heading!");
 
-*/
+const element = <h1>This is JSX heading</h1>
 
-const parent = React.createElement("div",{id:"parent"},
-    React.createElement("h1",{},"I am h1 tag!")
-);
+const Title = () => <span>This is title component!</span>
+
+const HeadingComponent = () => {
+  return <div>
+  <h1>This is component heading</h1>
+  {/*Component composition */}
+  <Title></Title>
+  <Title/>
+  {Title()}
+  {5+10}
+  </div>
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+root.render(<HeadingComponent/>); // rendering component
 
-/*
-    <div id="parent2">
-      <h1>I am h1 tag!</h1>
-      <h2>I am h2 tag!</h2>
-    </div>
-
-*/
-
-const parent2 = React.createElement("div",{},[
-    React.createElement("h1",{},"I am h1 tag!"),
-    React.createElement("h2",{},"I am h2 tag!")
-]);
-
-
-// root.render(parent);
-root.render(parent2);
+// root.render(parent); rendering react element
