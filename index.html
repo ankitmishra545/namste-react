@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is html h1 tag</h1>
+    <div>
+        <h2>this is html h2 tag!</h2>
+    </div>
+    <div id="main"></div>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+ <!--   <script >
+        // using javascript
+
+const heading = document.createElement("h1");
+
+heading.innerText = "I am js heading h1"; // innerHTML is property not function thats why we assign value through equal operator
+
+const main = document.getElementById("main");
+
+main.appendChild(heading);
+
+
+// using react 
+
+// console.log(React);
+// console.log(ReactDOM);
+
+const reactHeading = React.createElement("h1",{},"I am react heading h1"); // this returns react element not html element
+
+const root = ReactDOM.createRoot(document.getElementById("main")); // creates root element beacuse in react everything in object and every function can returns one thing thats why everything must be wrapped in single entity so wrapped in object.
+
+root.render(reactHeading); // render method converts reactHeading into html element and it replaces (not appending) in root element
+
+
+    </script> 
+    -->
+    <script src="App.js"></script>
+</body>
+</html>
